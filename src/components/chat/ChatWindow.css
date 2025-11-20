@@ -1,0 +1,33 @@
+.chat-window {
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 수평 중앙 정렬 유지 */
+  gap: 12px; /* 메시지들 사이 간격 확보 */
+  box-sizing: border-box;
+  /* 기존 패딩(60px 0 100px) 제거 — 스크롤 컨테이너가 여백 담당 */
+}
+
+.chat-bubble {
+  max-width: 70%;
+  padding: 14px 18px; /* 좀 더 여유 있게 */
+  border-radius: 16px;
+  line-height: 1.4;
+  font-size: 15px;
+  margin-bottom: 0; /* gap으로 간격 처리 */
+}
+
+.chat-bubble.bot {
+  align-self: flex-start;
+  background: #f4e5f7;
+  color: #333;
+  border-top-left-radius: 0;
+}
+
+.chat-bubble.user {
+  align-self: flex-end;
+  background: #ede9fe;
+  color: #333;
+  border-top-right-radius: 0;
+}

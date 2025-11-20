@@ -1,0 +1,279 @@
+.community-page {
+  width: 100%;
+  min-height: 100%;
+  padding: 48px 56px;
+  display: flex;
+  justify-content: center;
+}
+
+.community-page__container {
+  width: 100%;
+  max-width: 1080px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 18px 60px rgba(15, 23, 42, 0.08);
+  padding: 56px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #1f2937;
+}
+
+.community-page__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.community-page__title-group h2 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #111827;
+}
+
+.community-page__title-group p {
+  font-size: 16px;
+  color: #6b7280;
+}
+
+.community-page__action {
+  display: flex;
+  align-items: center;
+}
+
+.community-page__write-button {
+  border: none;
+  background: #111827;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.community-page__write-button:hover {
+  background: #1f2937;
+  transform: translateY(-1px);
+}
+
+.community-page__tabs {
+  display: flex;
+  gap: 32px;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.community-page__body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.community-page__tab {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  color: #94a3b8;
+  padding: 0 0 16px;
+  cursor: pointer;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.community-page__tab:hover {
+  color: #475569;
+}
+
+.community-page__tab--active {
+  color: #111827;
+  font-weight: 600;
+}
+
+.community-page__tab--active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 3px;
+  background: #111827;
+  border-radius: 999px 999px 0 0;
+}
+
+.community-page__section-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+}
+.community-page__posts {
+  display: grid;
+  grid-template-columns: 1fr; /* ⭐ 한 줄에 하나 */
+  gap: 20px;
+}
+
+.community-post-card {
+  background: #f9fafb;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.community-post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 30px rgba(15, 23, 42, 0.08);
+}
+
+.community-post-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.community-post-card__author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.community-post-card__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+}
+
+.community-post-card__content {
+  font-size: 15px;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+.community-post-card__footer {
+  display: flex;
+  gap: 18px;
+  color: #94a3b8;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.community-page__pagination {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.community-page__pagination button {
+  border: none;
+  background: transparent;
+  color: #94a3b8;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.community-page__pagination button:not(:disabled):hover {
+  background: #e2e8f0;
+  color: #1f2937;
+}
+
+.community-page__pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.community-page__page-number {
+  min-width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #64748b;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.community-page__page-number:hover {
+  background: #e2e8f0;
+  color: #1f2937;
+}
+
+.community-page__page-number--active {
+  background: #111827;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.community-page__loading,
+.community-page__empty,
+.community-page__error {
+  border: 1px dashed #e2e8f0;
+  border-radius: 16px;
+  padding: 48px;
+  text-align: center;
+  color: #64748b;
+  font-size: 15px;
+  background: #f8fafc;
+}
+
+.community-page__error {
+  border-color: #fecaca;
+  color: #b91c1c;
+  background: #fef2f2;
+}
+
+@media (max-width: 1024px) {
+  .community-page {
+    padding: 32px 28px;
+  }
+
+  .community-page__container {
+    padding: 40px;
+    border-radius: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .community-page {
+    padding: 24px 20px 80px;
+  }
+
+  .community-page__container {
+    padding: 32px 24px;
+    border-radius: 16px;
+  }
+
+  .community-page__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .community-page__tabs {
+    gap: 20px;
+    overflow-x: auto;
+  }
+
+  .community-page__posts {
+    grid-template-columns: 1fr;
+  }
+}
+

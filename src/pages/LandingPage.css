@@ -1,0 +1,100 @@
+.landing {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at top left, #f4e8ff 0, #f9fafb 45%, #ece9ff 100%);
+  color: #111827;
+  font-family: -apple-system, BlinkMacSystemFont, "Pretendard", system-ui, sans-serif;
+}
+
+.landing-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 40px;
+}
+
+.landing-logo {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.03em;
+  color: #4c1d95;
+}
+
+.landing-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  gap: 60px;
+}
+
+.landing-content {
+  max-width: 540px;
+}
+
+.landing-title {
+  font-size: 42px;
+  line-height: 1.25;
+  margin-bottom: 20px;
+  color: #111827;
+}
+
+.landing-subtitle {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 24px;
+}
+
+.landing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+  font-size: 14px;
+  color: #374151;
+}
+
+.landing-features li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 6px;
+}
+
+.landing-features li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #8b5cf6;
+}
+
+.landing-button {
+  padding: 12px 28px;
+  border-radius: 999px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #8b5cf6;
+  color: white;
+  box-shadow: 0 8px 18px rgba(139, 92, 246, 0.35);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+
+.landing-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(139, 92, 246, 0.4);
+  background: #7c3aed;
+}
+
+
+
+/* footer */
+.landing-footer {
+  padding: 12px 40px 18px;
+  font-size: 12px;
+  color: #9ca3af;
+}
+

@@ -1,0 +1,13 @@
+# dependencies
+node_modules/
+.vite/
+dist/
+
+# environment
+.env
+.env.*
+
+# system files
+.DS_Store
+.vscode/
+

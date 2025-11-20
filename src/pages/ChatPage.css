@@ -1,0 +1,164 @@
+/* ChatPage 전체 컨테이너 */
+.chat-page-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* 채팅 메인 영역 */
+.chat-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #fafafa;
+}
+
+/* 상단 헤더 바 */
+.chat-header {
+  background: white;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+}
+
+.chat-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.chat-header-icon {
+  width: 20px;
+  height: 20px;
+  color: #8b5cf6;
+}
+
+.chat-header-text {
+  font-size: 15px;
+  color: #666;
+}
+
+.chat-header-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.chat-header-greeting {
+  font-size: 18px;
+  font-weight: 600;
+  color: #4c1d95;
+}
+
+.chat-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.chat-error {
+  margin: 12px auto 0;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: #fee2e2;
+  color: #b91c1c;
+  font-size: 14px;
+  max-width: 720px;
+  text-align: center;
+}
+
+.chat-loading {
+  margin: 12px auto 0;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: #f3f0ff;
+  color: #8b5cf6;
+  font-size: 14px;
+  max-width: 720px;
+  text-align: center;
+}
+
+/* 빈 채팅 화면 */
+.empty-chat {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.empty-center {
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+}
+
+.welcome-message {
+  margin-bottom: 40px;
+}
+
+.welcome-message h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 12px 0;
+}
+
+.welcome-message p {
+  font-size: 16px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.start-hint {
+  margin-top: 16px;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* 채팅 스크롤러 */
+.chat-scroller {
+  flex: 1;
+  overflow-y: auto;
+  padding: 60px 20px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* 채팅 입력 래퍼 */
+.chat-input-wrap {
+  padding: 20px;
+  background: white;
+  border-top: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.disclaimer {
+  font-size: 12px;
+  color: #9ca3af;
+  text-align: center;
+}
+
+.sidebar-toggle-btn {
+  padding: 8px 12px;
+  background: #ede9fe;
+  color: #6d28d9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sidebar-toggle-btn:hover {
+  background: #e2d9ff;
+}

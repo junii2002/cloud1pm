@@ -1,0 +1,178 @@
+/* 전역 리셋 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background: #fafafa;
+  overflow: auto;
+}
+
+/* 전체 앱 레이아웃 */
+.app-layout {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: #fafafa;
+}
+
+.main-content {
+  flex: 1;
+  min-height: 100vh;
+  overflow-y: auto;
+  background: #fafafa;
+}
+
+/* 메인 레이아웃: sidebar + main content */
+.layout {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+
+/* 채팅 메인 영역 */
+.chat-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #fafafa;
+}
+
+/* 상단 헤더 바 */
+.chat-header {
+  background: white;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+}
+
+.chat-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.chat-header-icon {
+  width: 20px;
+  height: 20px;
+  color: #8b5cf6;
+}
+
+.chat-header-text {
+  font-size: 15px;
+  color: #666;
+}
+
+.chat-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ========================================
+   초기 빈 상태: 입력창 중앙 배치
+======================================== */
+.empty-chat {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+.welcome-message {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.welcome-message h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.welcome-message p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.start-hint {
+  color: #999;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* ========================================
+   메시지 존재 시: 스크롤 + 하단 고정 입력창
+======================================== */
+.chat-scroller {
+  flex: 1;
+  overflow-y: auto;
+  padding: 60px 20px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.chat-scroller::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-scroller::-webkit-scrollbar-thumb {
+  background: #d0d0d0;
+  border-radius: 3px;
+}
+
+.chat-input-wrap {
+  position: sticky;
+  bottom: 0;
+  background: #fafafa;
+  padding: 16px 20px 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.disclaimer {
+  font-size: 13px;
+  color: #aaa;
+  text-align: center;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .side-nav {
+    width: 200px;
+    min-width: 200px;
+  }
+  
+  .chat-scroller {
+    padding: 40px 16px 30px;
+  }
+  
+  .empty-center {
+    max-width: 100%;
+  }
+}

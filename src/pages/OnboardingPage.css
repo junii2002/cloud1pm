@@ -1,0 +1,83 @@
+.onboarding-container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.risk-card {
+  margin-top: 1.5rem;
+}
+
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.activity-btn {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  background: white;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 0.95rem;
+}
+
+.activity-btn:hover {
+  background: #f9f9f9;
+}
+
+.activity-btn.selected {
+  background: #e8f0ff;
+  
+  /* [수정 전] border-color: #5a75f9; */
+  border: 1px solid #5a75f9; /* 👈 [수정] border 속성으로 통일 */
+
+  font-weight: bold;
+}
+
+.custom-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.2rem;
+  gap: 0.5rem;
+}
+
+.custom-input input {
+  width: 70%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.custom-input button {
+  background: #6c63ff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.selected-list {
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+.selected-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.selected-list li {
+  background: #f4f4f4;
+  padding: 8px 12px;
+  border-radius: 15px;
+  display: inline-block;
+  margin: 4px;
+  font-size: 0.9rem;
+}
